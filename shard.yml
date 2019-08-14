@@ -1,0 +1,18 @@
+name: ecotar
+version: 0.1.0
+
+authors:
+  - Martin Artnik <martin.artnik@gmail.com>
+
+description: |
+  An app for recycled avatars
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+license: MIT
