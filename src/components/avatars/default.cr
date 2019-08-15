@@ -36,9 +36,14 @@ module Avatars
       g = @hash[1]
       b = @hash[2]
 
+      bg_color = StumpyPNG::RGBA.from_rgb_n(r, g, b, 8)
+      accent_color = StumpyPNG::RGBA.from_rgb_n(255 - r, 255 - g, 255 - b, 8)
+
+      puts @hash
+
       (0...@size).each do |x|
         (0...@size).each do |y|
-          @canvas[x, y] = StumpyPNG::RGBA.from_rgb_n(r, g, b, 8)
+          @canvas[x, y] = squares(x, y) ? accent_color : bg_color
         end
       end
 
@@ -55,6 +60,20 @@ module Avatars
         b:           pixels.sum { |p| Int64.new(p[2]) },
         pixel_count: pixels.size,
       }
+    end
+
+    def squares(x, y)
+      (x < [@hash[4], @hash[5]].max && x > [@hash[4], @hash[5]].min) && (y < [@hash[6], @hash[7]].max && y > [@hash[6], @hash[7]].min) ||
+        (x < [@hash[8], @hash[9]].max && x > [@hash[8], @hash[9]].min) && (y < [@hash[10], @hash[11]].max && y > [@hash[10], @hash[11]].min) ||
+        (x < [@hash[12], @hash[13]].max && x > [@hash[12], @hash[13]].min) && (y < [@hash[14], @hash[15]].max && y > [@hash[14], @hash[15]].min)
+    end
+
+    def space(x, y)
+      Math.sin((x + y + @hash[3]) * @hash[4]).abs * 1000 < @hash[5] ||
+        ((x - 30) ** 2 + (y - 30) ** 2) < @hash[9] ** 2 ||
+        ((x - @hash[6]/2) ** 2 + (y - @hash[7]/2) ** 2) < (@hash[8] * 2) ** 2 ||
+        ((x - @hash[12]/2) ** 2 + (y - @hash[13]/2) ** 2) < (@hash[14] * 2) ** 10 ||
+        ((x - @hash[9]/2) ** 2 + (y - @hash[10]/2) ** 2) < (@hash[11] * 2) ** 5
     end
   end
 end

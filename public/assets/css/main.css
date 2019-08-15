@@ -29,6 +29,12 @@ h1 {
   margin: 10px;
 }
 
+h1 small {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
 h2 {
   font-size: 22px;
   margin-top: 70px;
@@ -40,15 +46,15 @@ h2 {
   height: 260px;
   padding-bottom: 10px;
   margin: 0 auto;
-  background-image: url('/assets/img/bin_closed.png');
+  background-image: url('/assets/img/bin_closed.svg');
   background-size: 45%;
-  background-position: center bottom;
+  background-position: bottom center;
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
-.file-disposal:hover, .file-disposal:active {
-  background-image: url('/assets/img/bin_open.png');
+.file-disposal:hover, .file-disposal:active, .file-disposal.hover {
+  background-image: url('/assets/img/bin_open.svg');
 }
 
 .file-disposal input {
@@ -75,9 +81,9 @@ h2 {
   padding-top: 10px;
   margin: 10px;
   border-radius: 3px;
+  font-size: 10px;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
+  color: #000;
 }
 
 .ink-component--red {
@@ -93,17 +99,18 @@ h2 {
 }
 
 .ink-component--cyan {
-  background: #0ff;
+  background: #0ee;
 }
 
 .ink-component--magenta {
-  background: #f0f;
+  background: #e0e;
 }
 
 .ink-component--yellow {
-  background: #ff0;
+  background: #ee0;
 }
 
 .ink-component--black {
   background: #000;
+  color: #fff;
 }

@@ -76,7 +76,7 @@ post "/smelt" do |env|
 
   rgb_components = ImageSmelter.new(
     file.tempfile,
-    File.extname(file.filename || "unsupported")
+    File.extname((file.filename || "unsupported").downcase)
   ).rgb_components
 
   update_ink_from_rgb(rgb_components)

@@ -4,11 +4,11 @@
   </div>
 </form>
 
-<h2>Current Ink Status</h2>
+<h2>Available Ink</h2>
 <div class="ink-components">
   <% ink_component_ratios.each do |component, value| %>
-    <div class="ink-component ink-component--<%= component %>" style="height: <%= value * 100 %>%">
-      <%= component[0] %>
+    <div class="ink-component ink-component--<%= component %>" style="height: <%= 30 + value * 70 %>%">
+      <%= INK_COMPONENTS[component].floor.to_i64 / 10_000 %>ml
     </div>
   <% end %>
 </div>
