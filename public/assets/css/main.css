@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: Roboto, sans-serif;
+}
+
+main {
+  max-width: 500px;
+  padding: 30px;
+  margin: 50px auto 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+h1, h2, h3 {
+  font-family: Muli, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #ffc107;
+  font-size: 40px;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 70px;
+}
+
+.file-disposal {
+  position: relative;
+  width: 300px;
+  height: 260px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  background-image: url('/assets/img/bin_closed.png');
+  background-size: 45%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.file-disposal:hover, .file-disposal:active {
+  background-image: url('/assets/img/bin_open.png');
+}
+
+.file-disposal input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1337;
+  cursor: pointer;
+}
+
+.ink-components {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.ink-component {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 40px;
+  padding-top: 10px;
+  margin: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.ink-component--red {
+  background: linear-gradient(to bottom, #f33, #700);
+}
+
+.ink-component--green {
+  background: linear-gradient(to bottom, #3f3, #070);
+}
+
+.ink-component--blue {
+  background: linear-gradient(to bottom, #33f, #007);
+}
+
+.ink-component--cyan {
+  background: #0ff;
+}
+
+.ink-component--magenta {
+  background: #f0f;
+}
+
+.ink-component--yellow {
+  background: #ff0;
+}
+
+.ink-component--black {
+  background: #000;
+}

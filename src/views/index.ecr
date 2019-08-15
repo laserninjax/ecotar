@@ -1,12 +1,14 @@
-<html>
-  <head>
-    <title>Ecotar</title>
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <main id="app">
-      <h1>Ecotar</h1>
-    </main>
-    <script src="/js/main.js"></script>
-  </body>
-</html>
+<form action="/smelt" method="post" enctype="multipart/form-data" id="file-disposal">
+  <div class="file-disposal">
+    <input type="file" name="file" id="file" onchange="this.form.submit()">
+  </div>
+</form>
+
+<h2>Current Ink Status</h2>
+<div class="ink-components">
+  <% ink_component_ratios.each do |component, value| %>
+    <div class="ink-component ink-component--<%= component %>" style="height: <%= value * 100 %>%">
+      <%= component[0] %>
+    </div>
+  <% end %>
+</div>

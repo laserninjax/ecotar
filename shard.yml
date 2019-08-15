@@ -10,6 +10,10 @@ description: |
 dependencies:
   kemal:
     github: kemalcr/kemal
+  stumpy_jpeg:
+    github: reiswindy/stumpy_jpeg
+  stumpy_png:
+    github: stumpycr/stumpy_png
 
 # development_dependencies:
 #   webmock:
