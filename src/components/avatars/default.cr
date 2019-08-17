@@ -35,8 +35,8 @@ module Avatars
         (0...@size).each do |y|
           @canvas[y, x] =
             StumpyPNG::RGBA.from_rgb_n(
-              @hash[0] * Math.sin(2*(x + y)/@hash[1]),
-              @hash[2] * Math.cos(2*(x + y)/@hash[3]),
+              @hash[0] * Math.sin(2*(x + y)/([@hash[1], 1].max)),
+              @hash[2] * Math.cos(2*(x + y)/([@hash[3], 1].max)),
               @hash[4],
               8
             )

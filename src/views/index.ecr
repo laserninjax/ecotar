@@ -1,6 +1,9 @@
-<div class="row">
+<div class="row text-center">
   <div class="col-md-6">
-    <h2>Dispose</h2>
+    <h2>
+      Dispose
+    </h2>
+    <p>Throw away images you consider trash.</p>
     <form action="/smelt" method="post" enctype="multipart/form-data" id="file-disposal">
       <div class="file-disposal" id="fileDisposal">
         <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" onchange="this.form.submit()">
@@ -9,11 +12,12 @@
   </div>
   <div class="col-md-6">
     <h2>Recycle</h2>
-    <% if avatar_seed %>
-      <img src="avatar/<%= avatar_seed %>">
-    <% end %>
-    <form action="/" method="get" class="print-form">
-      <input type="text" name="avatar_seed" id="avatar_seed">
+    <p>Create beautiful avatars from recycled colors.</p>
+    <div class="avatar-frame">
+        <img id="avatarImage">
+    </div>
+    <form action="/" method="get" class="avatar-form" id="avatarForm">
+      <input type="text" name="avatarSeed" id="avatarSeed" placeholder="Enter identifier..." autocomplete="off" required>
       <input type="submit" value="Print Avatar">
     </form>
     <div class="ink-components">
