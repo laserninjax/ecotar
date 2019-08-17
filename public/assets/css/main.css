@@ -114,19 +114,19 @@ h2 {
   background: linear-gradient(to bottom, #33f, #007);
 }
 
-.ink-component--cyan {
+.ink-component--c {
   background: #0ee;
 }
 
-.ink-component--magenta {
+.ink-component--m {
   background: #e0e;
 }
 
-.ink-component--yellow {
+.ink-component--y {
   background: #ee0;
 }
 
-.ink-component--black {
+.ink-component--k {
   background: #000;
   color: #fff;
 }

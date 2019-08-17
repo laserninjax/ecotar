@@ -1,4 +1,4 @@
-var fileDisposal = document.getElementById("layout");
+var fileDisposal = document.getElementById("fileDisposal");
 fileDisposal.addEventListener("dragover", hover, false);
 fileDisposal.addEventListener("dragleave", unhover, false);
 fileDisposal.addEventListener("drop", unhover, false);

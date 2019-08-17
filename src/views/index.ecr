@@ -2,8 +2,8 @@
   <div class="col-md-6">
     <h2>Dispose</h2>
     <form action="/smelt" method="post" enctype="multipart/form-data" id="file-disposal">
-      <div class="file-disposal">
-        <input type="file" name="file" id="file" onchange="this.form.submit()">
+      <div class="file-disposal" id="fileDisposal">
+        <input type="file" name="file" id="file" accept=".jpg,.jpeg,.png" onchange="this.form.submit()">
       </div>
     </form>
   </div>
@@ -17,10 +17,10 @@
       <input type="submit" value="Print Avatar">
     </form>
     <div class="ink-components">
-      <% ink_component_ratios.each do |component, value| %>
+      <% INK_COMPONENTS.each do |component, value| %>
         <div class="ink-cartridge">
           <img src="/assets/img/cartridge.svg">
-          <div class="ink-component ink-component--<%= component %>" style="height: <%= 30 + value * 69 %>%"></div>
+          <div class="ink-component ink-component--<%= component %>" style="height: <%= Math.log(value, 2) * 4 %>px"></div>
         </div>
       <% end %>
     </div>
