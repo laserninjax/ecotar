@@ -48,7 +48,7 @@ def update_ink_from_rgb(rgb_components, use_up = false)
   end
 end
 
-get "/" do
+get "/" do |env|
   max_ink_component = INK_COMPONENTS.values.max.to_f
   ink_component_ratios = {
     "cyan"    => INK_COMPONENTS["cyan"].to_f/max_ink_component,
@@ -56,6 +56,7 @@ get "/" do
     "yellow"  => INK_COMPONENTS["yellow"].to_f/max_ink_component,
     "black"   => INK_COMPONENTS["black"].to_f/max_ink_component,
   }
+  avatar_seed = env.params.query["avatar_seed"]?
   layout_render "index"
 end
 

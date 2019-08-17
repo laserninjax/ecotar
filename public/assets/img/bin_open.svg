@@ -11,8 +11,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="72.162773mm"
-   height="136.20815mm"
-   viewBox="0 0 72.162773 136.20815"
+   height="137.26646mm"
+   viewBox="0 0 72.162773 137.26646"
    version="1.1"
    id="svg2157"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -46,7 +46,7 @@
        xlink:href="#linearGradient1479"
        id="linearGradient9666"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-36.871816,7.2162772)"
+       gradientTransform="translate(70.208064,8.6962806)"
        x1="48.646072"
        y1="126.71385"
        x2="113.32026"
@@ -71,9 +71,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-412.20084"
-     inkscape:cy="191.68692"
+     inkscape:zoom="0.65592321"
+     inkscape:cx="-165.03808"
+     inkscape:cy="610.17508"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -98,13 +98,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-88.650757,-63.342355)">
+     transform="translate(-186.08248,-203.80037)">
     <g
-       transform="translate(-26.459091,18.086137)"
-       id="g905"
-       inkscape:export-filename="C:\Users\artoa\bin_open.png"
-       inkscape:export-xdpi="175.97914"
-       inkscape:export-ydpi="175.97914">
+       transform="translate(70.972628,158.54415)"
+       id="g3383">
       <rect
          inkscape:export-ydpi="175.97914"
          inkscape:export-xdpi="175.97914"
@@ -146,41 +143,37 @@
          width="64.144684"
          id="rect1457-5-9"
          style="fill:#ffc524;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.37292147;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <g
-         transform="translate(107.07988,1.4800034)"
-         id="g9433-5">
-        <rect
-           style="fill:#1c252e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="rect1440-7"
-           width="7.4835467"
-           height="21.648832"
-           x="67.88623"
-           y="158.33553"
-           ry="3.7417734"
-           inkscape:export-filename="C:\Users\artoa\bin_closed.png"
-           inkscape:export-xdpi="175.97914"
-           inkscape:export-ydpi="175.97914" />
-        <rect
-           style="fill:#1c252e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="rect1440-3-0"
-           width="7.4835467"
-           height="21.648832"
-           x="12.852905"
-           y="158.33553"
-           ry="3.7417734"
-           inkscape:export-filename="C:\Users\artoa\bin_closed.png"
-           inkscape:export-xdpi="175.97914"
-           inkscape:export-ydpi="175.97914" />
-        <path
-           style="fill:url(#linearGradient9666);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8.55706215;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 11.774255,90.597002 h 64.67419 l -7.18869,86.666248 H 18.962934 Z"
-           id="rect1436-3"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="ccccc"
-           inkscape:export-filename="C:\Users\artoa\bin_closed.png"
-           inkscape:export-xdpi="175.97914"
-           inkscape:export-ydpi="175.97914" />
-      </g>
+      <rect
+         inkscape:export-ydpi="175.97914"
+         inkscape:export-xdpi="175.97914"
+         inkscape:export-filename="C:\Users\artoa\bin_closed.png"
+         ry="3.7417734"
+         y="160.87386"
+         x="174.96611"
+         height="21.648832"
+         width="7.4835467"
+         id="rect1440-7"
+         style="fill:#1c252e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         inkscape:export-ydpi="175.97914"
+         inkscape:export-xdpi="175.97914"
+         inkscape:export-filename="C:\Users\artoa\bin_closed.png"
+         ry="3.7417734"
+         y="160.87386"
+         x="119.93279"
+         height="21.648832"
+         width="7.4835467"
+         id="rect1440-3-0"
+         style="fill:#1c252e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="175.97914"
+         inkscape:export-xdpi="175.97914"
+         inkscape:export-filename="C:\Users\artoa\bin_closed.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect1436-3"
+         d="m 118.85414,92.077005 h 64.67418 l -7.18869,86.666245 h -50.29682 z"
+         style="fill:url(#linearGradient9666);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8.55706215;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          sodipodi:nodetypes="sssssss"
          inkscape:connector-curvature="0"

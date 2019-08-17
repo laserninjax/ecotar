@@ -29,25 +29,22 @@ module Avatars
     def generate_avatar!
       return true if @generated
 
-      x = @size / 2
-      y = @size / 2
-
-      r = @hash[0]
-      g = @hash[1]
-      b = @hash[2]
-
-      bg_color = StumpyPNG::RGBA.from_rgb_n(r, g, b, 8)
-      accent_color = StumpyPNG::RGBA.from_rgb_n(255 - r, 255 - g, 255 - b, 8)
-
-      puts @hash
-
       (0...@size).each do |x|
         (0...@size).each do |y|
-          @canvas[x, y] = squares(x, y) ? accent_color : bg_color
+          @canvas[y, x] =
+            StumpyPNG::RGBA.from_rgb_n(
+              @hash[0] * Math.sin(2*(x + y)/@hash[1]),
+              @hash[2] * Math.cos(2*(x + y)/@hash[3]),
+              @hash[4],
+              8
+            )
         end
       end
 
-      generated = true
+      mirror_x! if @hash[5] > 127
+      mirror_y! if @hash[6] > 127
+
+      @generated = true
     end
 
     def rgb_components
@@ -62,18 +59,36 @@ module Avatars
       }
     end
 
-    def squares(x, y)
-      (x < [@hash[4], @hash[5]].max && x > [@hash[4], @hash[5]].min) && (y < [@hash[6], @hash[7]].max && y > [@hash[6], @hash[7]].min) ||
-        (x < [@hash[8], @hash[9]].max && x > [@hash[8], @hash[9]].min) && (y < [@hash[10], @hash[11]].max && y > [@hash[10], @hash[11]].min) ||
-        (x < [@hash[12], @hash[13]].max && x > [@hash[12], @hash[13]].min) && (y < [@hash[14], @hash[15]].max && y > [@hash[14], @hash[15]].min)
+    def mirror_x!
+      (0...@size).each do |x|
+        (0...@size).each do |y|
+          @canvas[@size - 1 - x, y] = @canvas[x, y]
+        end
+      end
     end
 
-    def space(x, y)
-      Math.sin((x + y + @hash[3]) * @hash[4]).abs * 1000 < @hash[5] ||
-        ((x - 30) ** 2 + (y - 30) ** 2) < @hash[9] ** 2 ||
-        ((x - @hash[6]/2) ** 2 + (y - @hash[7]/2) ** 2) < (@hash[8] * 2) ** 2 ||
-        ((x - @hash[12]/2) ** 2 + (y - @hash[13]/2) ** 2) < (@hash[14] * 2) ** 10 ||
-        ((x - @hash[9]/2) ** 2 + (y - @hash[10]/2) ** 2) < (@hash[11] * 2) ** 5
+    def mirror_y!
+      (0...@size).each do |x|
+        (0...@size).each do |y|
+          @canvas[x, @size - 1 - y] = @canvas[x, y]
+        end
+      end
+    end
+
+    def draw_rect(x1 : Int32, y1 : Int32, x2 : Int32, y2 : Int32, color : StumpyPNG::RGBA)
+      (x1..x2).each do |x|
+        (y1..y2).each do |y|
+          @canvas[x, y] = color
+        end
+      end
+    end
+
+    def draw_square(x : Int32, y : Int32, a : Int32, color : StumpyPNG::RGBA)
+      (x..x + a).each do |x|
+        (y..y + a).each do |y|
+          @canvas[x, y] = color
+        end
+      end
     end
   end
 end
