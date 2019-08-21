@@ -24,7 +24,7 @@
       <% INK_COMPONENTS.each do |component, value| %>
         <div class="ink-cartridge">
           <img src="/assets/img/cartridge.svg">
-          <div class="ink-component ink-component--<%= component %>" style="height: <%= Math.log(value, 2) * 4 %>px"></div>
+          <div id="<%= component %>Ink" class="ink-component ink-component--<%= component %>" style="height: <%= Math.log(value, 2) * 4 %>px"></div>
         </div>
       <% end %>
     </div>

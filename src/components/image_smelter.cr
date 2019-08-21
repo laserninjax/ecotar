@@ -41,7 +41,7 @@ class ImageSmelter
 
     puts "r: #{rn}, g: #{gn}, b: #{bn}"
 
-    k = (1 - [rn, gn, bn].max).to_i64
+    k = (1 - [rn, gn, bn].max)
     c = k == 1 ? 0.0 : ((1 - rn - k) / (1 - k)).to_f
     m = k == 1 ? 0.0 : ((1 - gn - k) / (1 - k)).to_f
     y = k == 1 ? 0.0 : ((1 - bn - k) / (1 - k)).to_f

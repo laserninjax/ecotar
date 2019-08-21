@@ -39,6 +39,11 @@ get "/" do |env|
   layout_render "index"
 end
 
+get "/ink_status.json" do |env|
+  env.response.content_type = "application/json"
+  INK_COMPONENTS.to_json
+end
+
 get "/avatar/:seed" do |env|
   avatar_generator = Avatars::Default.new(128, env.params.url["seed"])
   path = "public/avatars/#{avatar_generator.hash.to_slice.hexstring}.png"
